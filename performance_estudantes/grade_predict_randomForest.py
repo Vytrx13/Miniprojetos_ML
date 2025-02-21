@@ -42,6 +42,8 @@ def main():
     sc = StandardScaler()
     X = sc.fit_transform(X)
 
+    #obs: em geral feature scaling é feito após o split dos dados, mas para este caso específico, não há problema em fazer antes
+
     # Dividir os dados
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
 
